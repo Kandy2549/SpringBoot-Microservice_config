@@ -7,12 +7,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.kandy.microservices.bean.CurrencyConversionBean;
 
-@FeignClient(name="currency-exchange-service")
-
+@FeignClient(name="netflix-zuul-api-server")  
 @RibbonClient(name="currency-exchange-service")
-
 public interface CurrencyExchangeServiceProxy {
 	
-	@GetMapping("/currency-exchange/from/{from}/to/{to}")		
+	/*
+	 *  Changed @GetMapping url from /currency-exchange/from/{from}/to/{to} to
+	 * /currency-exchange-service/currency-exchange/from/{from}/to/{to} due to
+	 * implementation of zuul api
+	 * 
+	 */	
+	
+	@GetMapping("/currency-exchange-service/currency-exchange/from/{from}/to/{to}")		
 	public CurrencyConversionBean retrieveExchangeValue(@PathVariable("from") String from, @PathVariable("to") String to);
 }

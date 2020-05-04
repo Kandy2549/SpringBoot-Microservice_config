@@ -32,7 +32,7 @@ public class CurrencyConversion_controller {
 		uriVariables.put("to", to);  
 		
 		//calling the currency-exchange-service  
-		ResponseEntity<CurrencyConversionBean>responseEntity=new RestTemplate().getForEntity("http://localhost:8001/currency-exchange/from/{from}/to/{to}", CurrencyConversionBean.class, uriVariables);  
+		ResponseEntity<CurrencyConversionBean>responseEntity=new RestTemplate().getForEntity("http://localhost:8000/currency-exchange/from/{from}/to/{to}", CurrencyConversionBean.class, uriVariables);  
 		CurrencyConversionBean response=responseEntity.getBody();  
 		
 		//creating a new response bean and getting the response back and taking it into Bean  

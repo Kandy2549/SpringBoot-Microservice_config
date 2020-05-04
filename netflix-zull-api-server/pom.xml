@@ -8,11 +8,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.kandy.eureka.server</groupId>
-	<artifactId>netflix-eureka-naming-server</artifactId>
+	<groupId>com.kandy.zull.server</groupId>
+	<artifactId>netflix-zull-api-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>netflix-eureka-naming-server</name>
-	<description>Spring Microservice Eureka Naming Server Demo</description>
+	<name>netflix-zull-api-server</name>
+	<description>Spring Microservice Zull Api Server Demo</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -26,12 +26,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
 		</dependency>
 
 		<dependency>
@@ -57,7 +56,6 @@
 		    <artifactId>logback-classic</artifactId>
 		    <version>1.1.11</version>
 		</dependency>
-		
 	</dependencies>
 
 	<dependencyManagement>
