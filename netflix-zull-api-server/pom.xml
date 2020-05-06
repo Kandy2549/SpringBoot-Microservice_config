@@ -51,6 +51,12 @@
 			</exclusions>
 		</dependency>
 		
+		<!-- Spring Cloud Library that provides the ability to track the progress of subsequent microservice -->
+		<dependency>  
+			<groupId>org.springframework.cloud</groupId>  
+			<artifactId>spring-cloud-starter-sleuth</artifactId>  
+		</dependency>  
+		
 		<dependency>
 		    <groupId>ch.qos.logback</groupId>
 		    <artifactId>logback-classic</artifactId>

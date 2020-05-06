@@ -15,9 +15,8 @@ public interface CurrencyExchangeServiceProxy {
 	 *  Changed @GetMapping url from /currency-exchange/from/{from}/to/{to} to
 	 * /currency-exchange-service/currency-exchange/from/{from}/to/{to} due to
 	 * implementation of zuul api
-	 * 
+	 * /currency-exchange-service
 	 */	
-	
 	@GetMapping("/currency-exchange-service/currency-exchange/from/{from}/to/{to}")		
 	public CurrencyConversionBean retrieveExchangeValue(@PathVariable("from") String from, @PathVariable("to") String to);
 }
